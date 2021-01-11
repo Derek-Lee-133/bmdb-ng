@@ -1,0 +1,20 @@
+<section class="heading">
+    <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
+  </section>
+  <table class="table table-sm table-striped">
+  <thead>
+      <tr>
+        <th>id</th><th>firstName</th><th>lastName</th><th>movie</th><th>role</th><th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor= 'let credit of credits'>
+      <td>{{credit.id}}</td>
+      <td>{{credit.actor.firstName}}</td>
+      <td>{{credit.actor.lastName}}</td>
+      <td>{{credit.movie.title}}</td>
+      <td>{{credit.role}}</td>
+      <td>Detail | Edit</td>
+    </tr>
+  </tbody>
+</table>
