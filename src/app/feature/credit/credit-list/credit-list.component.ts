@@ -8,7 +8,7 @@ import {Credit} from '../../../model/credit.class'
   styleUrls: ['./credit-list.component.css']
 })
 export class CreditListComponent implements OnInit {
-  title ='Crdit List';
+  title ='Credit List';
   credits: Credit[]=[];
 
   constructor(private creditSvc: CreditService) { }

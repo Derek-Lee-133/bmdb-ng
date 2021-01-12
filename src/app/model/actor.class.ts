@@ -5,7 +5,7 @@ export class Actor {
     gender:string;
     birthDate: Date;
 
-    constructor(id:number=0, firstName:string="",lastName:string="", gender:string="",birthDate:Date) {
+    constructor(id:number=0, firstName:string="",lastName:string="", gender:string="",birthDate:Date=new Date()) {
         this.id=id;
         this.firstName=firstName;
         this.lastName=lastName;

@@ -7,13 +7,21 @@ import { MovieListComponent } from './feature/movie/movie-list/movie-list.compon
 import { HttpClientModule } from '@angular/common/http';
 import { ActorListComponent } from './feature/actor/actor-list/actor-list.component';
 import { CreditListComponent } from './feature/credit/credit-list/credit-list.component';
+import { MovieCreateComponent } from './feature/movie/movie-create/movie-create.component';
+import { ActorCreateComponent } from './feature/actor/actor-create/actor-create.component';
+import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
+import { MenuComponent } from './core/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
     ActorListComponent,
-    CreditListComponent
+    CreditListComponent,
+    MovieCreateComponent,
+    ActorCreateComponent,
+    NoComponentDefinedComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
