@@ -3,7 +3,7 @@
     <span class="component-title">[{{title}}]</span>
   </section>
  
-  <main class="single">
+  <main *ngIf= 'movie'class="single">
     <table class="table table-sm">
       <tr>
         <td>
@@ -40,6 +40,8 @@
     </table>
   </main>
   <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span> |
+  
  <!--
   <span><button (click)="backClicked()" class="btn btn-sm btn-primary">Back</button></span>
 -->
+
