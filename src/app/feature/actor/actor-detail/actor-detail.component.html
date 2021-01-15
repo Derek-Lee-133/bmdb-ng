@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<div class="component">
+    <section class="heading">
+        <span class="page-title font-weight-bold font-italic">{{title}}</span>
+        <span>&nbsp;<a routerLink="/actor-list">Return to List</a></span>
+    </section>
+    <main *ngIf='actor' class="single">
+        <table class="table table-sm">
+            <tr>
+                <td>ID</td>
+                <td>{{actor.id}}</td>
+            </tr>
+            <tr> 
+                <td>firstName:</td>
+                <td><input [(ngModel)]="actor.firstName" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>lastName:</td>
+                <td><input [(ngModel)]="actor.lastName" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>gender:</td>
+                <td><input [(ngModel)]="actor.gender" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>birthdate:</td>
+                <td><input [(ngModel)]="actor.birthdate" class="rounded" type="text" disabled></td>
+            </tr>
+        </table>
+    </main>
+    <span>
+
+        <span>&nbsp;<button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
+
+    </span>
+</div>

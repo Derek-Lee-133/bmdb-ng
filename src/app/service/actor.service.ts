@@ -11,12 +11,26 @@ export class ActorService {
 
   constructor(private http: HttpClient) { }
 
+   // service functions
+  // getAll movies
+
   getAll(): Observable<Actor[]> {
     return this.http.get(URL+'/') as Observable<Actor[]>;
   }
-   // actor movie
+  getById(id): Observable<Actor> {
+    return this.http.get(URL + '/' + id) as Observable<Actor>;
+  }
+   // actor create
    create(actor:Actor): Observable<Actor> {
     return this.http.post(URL+'/',actor) as Observable<Actor>;
+  }
+   // update actor
+   update(actor: Actor): Observable<Actor> {
+    return this.http.put(URL + '/', actor) as Observable<Actor>;
+  }
+  // delete actor
+  delete(id): Observable<Actor> {
+    return this.http.delete(URL + '/' + id) as Observable<Actor>;
   }
 
 }
