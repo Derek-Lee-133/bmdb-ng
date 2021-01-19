@@ -18,6 +18,7 @@ import { ActorEditComponent } from './feature/actor/actor-edit/actor-edit.compon
 import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail.component';
 import { CreditCreateComponent } from './feature/credit/credit-create/credit-create.component';
 import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.component';
+import { UserLoginComponent } from './feature/user/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +37,9 @@ import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.co
     CreditListComponent,
     CreditDetailComponent,
     CreditEditComponent,
-    CreditCreateComponent
-  ],
+    CreditCreateComponent,
+    UserLoginComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
