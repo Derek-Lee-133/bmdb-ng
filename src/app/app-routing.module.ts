@@ -12,7 +12,6 @@ import { MovieCreateComponent } from './feature/movie/movie-create/movie-create.
 import { MovieDetailComponent } from './feature/movie/movie-detail/movie-detail.component';
 import { MovieEditComponent } from './feature/movie/movie-edit/movie-edit.component';
 import { MovieListComponent } from './feature/movie/movie-list/movie-list.component';
-
 import { CreditCreateComponent } from './feature/credit/credit-create/credit-create.component';
 import { UserLoginComponent } from './feature/user/user-login/user-login.component';
 

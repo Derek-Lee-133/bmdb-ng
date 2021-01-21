@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../../service/user.service';
 import {User} from '../../../model/user.class';
 import { Router } from '@angular/router';
+import {SystemService} from '../../../service/system.service';
 
 @Component({
   selector: 'app-user-login',
@@ -13,6 +14,7 @@ msg: string = '';
 user: User = new User();
 
 constructor(private userSvc: UserService,
+            private sysSvc: SystemService,
             private router: Router) { }
 
 ngOnInit(): void {
@@ -29,6 +31,7 @@ login() {
       else {
         this.user = resp as User;
         console.log("Successful login!",this.user);
+        this.sysSvc.loggedInUser = this.user;
         this.router.navigateByUrl('/movie-list');
       }
     },
