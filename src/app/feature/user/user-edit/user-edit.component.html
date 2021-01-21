@@ -1,0 +1,70 @@
+<app-menu></app-menu>
+<section class="heading">
+    <span class="component-title">[{{title}}]</span>
+  </section>
+ 
+  <main class="single">
+    <table *ngIf= 'user' class="table table-sm">
+      <tr>
+        <td>
+            UserName:
+        </td>
+        <td>
+            <input [(ngModel)]="user.username" class="rounded" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+            PassWord:
+        </td>
+        <td>
+            <input [(ngModel)]="user.password" class="rounded" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+            FirstName:
+        </td>
+        <td>
+            <input [(ngModel)]="user.firstname" class="rounded" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+           LastName:
+        </td>
+        <td>
+            <input [(ngModel)]="user.lastname" class="rounded" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+           PhoneNumber:
+        </td>
+        <td>
+            <input [(ngModel)]="user.phonenumber" class="rounded" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+           Email:
+        </td>
+        <td>
+            <input [(ngModel)]="user.email" class="rounded" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+           CollectionValue:
+        </td>
+        <td>
+            <input [(ngModel)]="user.collectionValue" class="rounded" type="text">
+        </td>
+      </tr>
+    </table>
+  </main>
+  <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span> |
+ <!--
+  <span><button (click)="backClicked()" class="btn btn-sm btn-primary">Back</button></span>
+-->
+

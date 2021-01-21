@@ -1,0 +1,48 @@
+<app-menu></app-menu>
+<div class="component">
+    <section class="heading">
+        <span class="page-title font-weight-bold font-italic">{{title}}</span>
+        <span>&nbsp;<a routerLink="/user-list">Return to List</a></span>
+    </section>
+    <main *ngIf='user' class="single">
+        <table class="table table-sm">
+            <tr>
+                <td>ID</td>
+                <td>{{user.id}}</td>
+            </tr>
+            <tr> 
+                <td>username:</td>
+                <td><input [(ngModel)]="user.username" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>password:</td>
+                <td><input [(ngModel)]="user.password" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>FirstName:</td>
+                <td><input [(ngModel)]="user.firstname" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>LastName:</td>
+                <td><input [(ngModel)]="user.lastname" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>PhoneNumber:</td>
+                <td><input [(ngModel)]="user.phonenumber" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input [(ngModel)]="user.email" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>CollectionValue:</td>
+                <td><input [(ngModel)]="user.collectionValue" class="rounded" type="text" disabled></td>
+            </tr>
+        </table>
+    </main>
+    <span>
+
+        <span>&nbsp;<button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
+
+    </span>
+</div>

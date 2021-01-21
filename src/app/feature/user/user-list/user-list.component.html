@@ -1,0 +1,31 @@
+<app-menu></app-menu>
+<section class="heading">
+    <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
+    <a routerLink='/user-create'>
+      <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
+    </a>
+  </section>
+  <table class="table table-sm table-striped">
+  <thead>
+      <tr>
+        <th>Id</th><th>Title</th><th>Rating</th><th>Year</th><th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor= 'let user of users'>
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.password}}</td>
+      <td>{{user.firstname}}</td>
+      <td>{{user.lastname}}</td>
+      <td>{{user.phonenumber}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.collectionValue}}</td>
+      <td><a routerLink='/user-detail/{{user.id}}'>
+        <img width='20' height='20' src='assets/details.png' title='user Details'></a> | 
+        <a routerLink='/user-edit/{{user.id}}'>
+        <img width='20' height='20' src='assets/pencil-icon.png' title='user Edit'></a>
+     </td>
+    </tr>
+  </tbody>
+</table>
